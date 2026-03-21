@@ -53,7 +53,7 @@ const Categories = () => {
     const handleChange = (value: string | null) => {
         const params = new URLSearchParams(searchParams);
         params.set("category", value || "all");
-        router.push(`${pathName}?${params.toString()}`);
+        router.push(`${pathName}?${params.toString()}`,{scroll:false});
     };
 
     console.log(selectedCategory);

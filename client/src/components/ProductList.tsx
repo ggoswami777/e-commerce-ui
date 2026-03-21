@@ -2,6 +2,7 @@ import { ProductsType } from '@/types';
 import React from 'react'
 import Categories from './Categories';
 import ProductCard from './ProductCard';
+import Link from 'next/link';
 const products: ProductsType = [
   {
     id: 1,
@@ -112,10 +113,10 @@ const products: ProductsType = [
     images: { blue: "/products/8b.png", green: "/products/8gr.png" },
   },
 ];
-const ProductList = () => {
+const ProductList = ({category}:{category:string}) => {
   return (
     <div className='w-full'>
-        <Categories/>
+        <Categories/ >
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12'>
             {
                 products.map(product=>(
@@ -123,6 +124,7 @@ const ProductList = () => {
                 ))
             }
         </div>
+        <Link href={category?`/products/?category=${category}`:"/products"} className='flex justify-end mt-4 underline text-sm text-gray-500'>View all products</Link>
     </div>
   )
 }
