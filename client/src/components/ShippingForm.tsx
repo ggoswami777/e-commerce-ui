@@ -50,7 +50,7 @@ const ShippingForm = ({setShippingForm}:{setShippingForm:(data:ShippingFormInput
           <p className="text-xs text-red-500">{errors.city.message}</p>
         }
       </div>
-      <button type="submit" className="w-full bg-gray-800 hover:bg-gray-900 transition-all  text-white p-2 rounded-lg cursor-pointer flex items-center gap-2">
+      <button type="submit" className="w-full bg-gray-800 hover:bg-gray-900 transition-all  text-white p-2 rounded-lg cursor-pointer flex items-center gap-2 justify-center">
               Continue
               <ArrowRight className="w-3 h-3"/>
             </button>
