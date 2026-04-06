@@ -51,12 +51,14 @@ export function DataTable<TData, TValue>({
   console.log(rowSelection);
   return (
     <div className="rounded-md border">
-      {
-        Object.keys(rowSelection).length>0 && <div className="flex justify-end">
-          <button className="flex items-center bg-red-500 text-white px-2 py-1 text-sm rounded-md m-4 cursor-pointer"><Trash2 className="w-4 h04 
-          "/>Delete Payment(s)</button>
+      {Object.keys(rowSelection).length > 0 && (
+        <div className="flex justify-end">
+          <button className="flex items-center bg-red-500 text-white px-2 py-1 text-sm rounded-md m-4 cursor-pointer">
+            <Trash2 className="w-4 h-4 mr-2" />
+            Delete Product(s)
+          </button>
         </div>
-      }
+      )}
       <Table>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (
